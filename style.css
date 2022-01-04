@@ -59,7 +59,7 @@ section{
     color:#fff;
 }
 
-/* header */
+/* header section*/
 
 header{
     position: fixed;
@@ -107,8 +107,10 @@ header .icons a:hover{
     color: var(--black);
     border-radius: 0.3rem;
     cursor: pointer;
-    display: none; /* responsive */
+    display: none; /* 🍖responsive */
 }
+
+/* home section */
 
 .home{
     padding: 0;
@@ -175,6 +177,78 @@ header .icons a:hover{
     0%{
         opacity: 0;
         top: -10rem;
-    }
-    
+    }    
 }
+
+.home .slide-container .slide .content span{
+    font-size: 2rem;
+    color: var(--orange);
+}
+.home .slide-container .slide .content h3{
+    font-size: 5rem;
+    color: var(--black);
+}
+.home .slide-container .slide .content p{
+    font-size: 1.7rem;
+    color: #666;
+    padding: 0.5rem 0;
+}
+
+.home .slide-container:nth-child(1) .slide{
+    background: url(./images/home-bg-1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.home .slide-container:nth-child(2) .slide{
+    background: url(./images/home-bg-2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.home .slide-container:nth-child(3) .slide{
+    background: url(./images/home-bg-3.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .slide-container{
+    display: none; /* 🍖js css  */
+}
+
+.home .slide-container.active{
+    display: block; /* 🍖js css  */
+}
+
+.home #prev,
+.home #next{
+    background-color: yellow;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    z-index: 100;
+
+    height: 5rem;   /* 🍖css20 */
+    width: 5rem;
+    line-height: 4.5rem; /* 🦄css20 수직정렬 */
+
+    font-size: 2rem;
+    color: var(--black);
+    border: 0.2rem solid var(--black);
+    cursor: pointer;
+    text-align: center; /* 🦄수평정렬 */
+}
+
+.home #prev:hover,
+.home #next:hover{
+  color:#fff;
+  background:var(--orange);
+}
+.home #prev{
+    left:3rem;
+}
+  
+.home #next{
+    right:3rem;
+}
+
+/* service section*/
