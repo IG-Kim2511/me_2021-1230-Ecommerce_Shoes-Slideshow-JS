@@ -130,9 +130,10 @@ header .icons a:hover{
 
 
 .home .slide-container .slide .content{
-    background-color: yellow;
-    flex: 1 1 40rem;
-    animation: slideContent 0.5s linear 1s backwards;
+    
+     /* 🦄https://developer.mozilla.org/en-US/docs/Web/CSS/flex */
+     flex: 1 1 40rem;
+     animation: slideContent 0.5s linear 1s backwards;
 }
 
 @keyframes slideContent{
@@ -140,4 +141,40 @@ header .icons a:hover{
         opacity: 0;
         transform: translateX(-10rem);
     }
+}
+
+.home .slide-container .slide .image{
+    flex: 1 1 50rem;
+    padding-bottom: 15rem;
+    position: relative;
+    z-index: 0;
+}
+
+.home .slide-container .slide .image .shoe{
+    
+    width: 100%;
+    transform: rotate(-35deg);
+    animation: shoe 0.3s linear;
+}
+
+@keyframes shoe {
+    0%{
+        transform: rotate(0deg) scale(0.5);
+    }
+    
+}
+
+.home .slide-container .slide .image .text{
+    position: absolute;
+    top: 0; left: 0;
+    z-index: -1;
+    animation: shoeText 0.5s linear 0.5s backwards;
+}
+
+@keyframes shoeText {
+    0%{
+        opacity: 0;
+        top: -10rem;
+    }
+    
 }
