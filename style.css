@@ -42,7 +42,6 @@ section{
 }
 
 .btn{
-    background-color: yellow;
     display: inline-block;
     margin-top: 1rem;
     border-radius: .5rem;
@@ -61,3 +60,84 @@ section{
 }
 
 /* header */
+
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background-color: #fff;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); 
+    
+}
+
+header .logo{
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+header .navbar a{
+    font-size: 1.7rem;
+    color: var(--black);
+    margin: 0 1rem;
+}
+
+header .navbar a:hover{
+    color: var(--orange);
+}
+
+header .icons a {
+    font-size: 2.5rem;
+    color: var(--black);
+    margin-left: 1.5rem;
+    
+}
+
+header .icons a:hover{
+    color: var(--orange);
+}
+
+#menu-bar{
+    font-size: 2.5rem;
+    padding: 0.5rem 1.5rem;
+    border: 0.1rem solid var(--black);
+    color: var(--black);
+    border-radius: 0.3rem;
+    cursor: pointer;
+    display: none; /* responsive */
+}
+
+.home{
+    padding: 0;
+    position: relative;
+}
+
+.home .slide-container .slide{
+    
+    min-height: 100vh;
+    
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* 🦄 */
+    
+    gap: 1.5rem; /* 🦄flex에서도 사용가능 */
+    padding: 0 9%;
+    padding-top: 9rem;
+}
+
+
+.home .slide-container .slide .content{
+    background-color: yellow;
+    flex: 1 1 40rem;
+    animation: slideContent 0.5s linear 1s backwards;
+}
+
+@keyframes slideContent{
+    0%{
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+}
