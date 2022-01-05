@@ -210,11 +210,11 @@ header .icons a:hover{
 }
 
 .home .slide-container{
-    display: none; /* 🍖js css  */
+    display: none; /* 🍖js22 css  */
 }
 
 .home .slide-container.active{
-    display: block; /* 🍖js css  */
+    display: block; /* 🍖js22 css  */
 }
 
 .home #prev,
