@@ -1,3 +1,10 @@
+/* 🍚next
+calculate price ,  subTotal, tax, Total
+
+cart function
+*/
+
+
 /* 🍀js12. menu-bar& navbar click , hide & active */
 
 /*🍄
@@ -5,8 +12,8 @@
  2. active toggle
 */
 
-let menu = document.querySelector('#menu-bar');
-let navbar = document.querySelector('.navbar');
+const menu = document.querySelector('#menu-bar');
+const navbar = document.querySelector('.navbar');
 
 menu.onclick =()=>{
     menu.classList.toggle('fa-times'); /* font awesome change */
@@ -62,7 +69,7 @@ index = (index - 1 + slides.length) % slides.length;
 1-1+3 = 3  % 3 = 0
 */
 
-let slides = document.querySelectorAll('.slide-container');
+const slides = document.querySelectorAll('.slide-container');
 let index = 0;
 
 console.log(slides);
@@ -83,3 +90,52 @@ function prev() {
     console.log(index)
     slides[index].classList.add('active');    
 }
+
+
+// 🍀js39, featured images 선택 (옆의 다른 사진들, 메인화면에 보이게하기)
+
+/*🦄 class이름으로 src찾아내기
+document.querySelector('.~').src
+
+~.getAttribute('src');
+*/
+
+/* 🍄
+10 forEach : class "featured-image-1"가져옴
+
+20 getAttribute('src') : 🦄
+
+30 클릭한곳의 src...👉 class"big-imgae-1"의 src에 삽입 
+*/
+
+let featuredImage1 = document.querySelectorAll('.featured-image-1')
+let featuredImage2 = document.querySelectorAll('.featured-image-2')
+let featuredImage3 = document.querySelectorAll('.featured-image-3')
+
+featuredImage1.forEach(
+    image_1=>{
+        image_1.addEventListener('click',()=>{
+            let getSrc = image_1.getAttribute('src');
+
+            document.querySelector('.big-image-1').src = getSrc;
+        });
+    }
+);
+featuredImage2.forEach(
+    image_2=>{
+        image_2.addEventListener('click',()=>{
+            let getSrc = image_2.getAttribute('src');
+
+            document.querySelector('.big-image-2').src = getSrc;
+        });
+    }
+);
+featuredImage3.forEach(
+    image_3=>{
+        image_3.addEventListener('click',()=>{
+            let getSrc = image_3.getAttribute('src');
+
+            document.querySelector('.big-image-3').src = getSrc;
+        });
+    }
+);
