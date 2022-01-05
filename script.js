@@ -173,9 +173,21 @@ function renderProducts() {
                         <i class="far fa-star"></i>
                     </div>
                     <div class="price">inventory: ${p_product.instock}</div>
-                    <button class="btn">add to cart</button>
+                    <button class="btn" onclick="addToCart(${p_product.id})">add to cart</button>
                 </div>
             </div>
         `  
     });  
+}
+
+
+let cart = [];
+
+function addToCart(p_id) {
+    
+}
+
+updateCart();
+function updateCart() {
+    
 }
