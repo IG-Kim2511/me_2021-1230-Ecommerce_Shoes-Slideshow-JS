@@ -330,7 +330,7 @@ header .icons a:hover{
     left:1rem;
 }
 
-.products .box-container .box .icons a{
+.products .box-container .box .icons button{
     height:4.5rem;
     width:5rem;
     line-height: 4.5rem;
@@ -342,7 +342,7 @@ header .icons a:hover{
     margin-top: .5rem;
 }
 
-.products .box-container .box .icons a:hover{
+.products .box-container .box .icons button:hover{
     background:var(--orange);
     color:#fff;
 }
