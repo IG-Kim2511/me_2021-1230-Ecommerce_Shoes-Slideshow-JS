@@ -6,7 +6,7 @@ const productsData = [
       instock: 9,
       description: "inventory : 9",
       imgSrc: "./images/product-1.png",
-      //🍖js33. numberOfUnits:1
+      //🍖js13. numberOfUnits:1
     },
     {
       id: 1,
