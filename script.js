@@ -2,6 +2,10 @@
 calculate price ,  subTotal, tax, Total
 
 cart function
+
+wish list
+
+star function
 */
 
 
