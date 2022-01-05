@@ -494,7 +494,56 @@ header .icons a:hover{
 .review .box-container .box .stars i{
     color:var(--orange);
     font-size: 2rem;
-    background-color: yellow;
 }
 
 /* newsletter section */
+
+.newsletter{
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+.newsletter .content{
+    text-align: center;
+    border:.1rem solid rgba(0,0,0,.1);
+    border-radius: .5rem;
+    background:#f9f9f9;
+    padding:2rem;
+}
+
+.newsletter .content h3{
+    font-size: 2.5rem;
+    color:var(--black);
+}
+
+.newsletter .content p{
+    font-size: 1.5rem;
+    color:#666;
+    margin:1rem auto;
+    max-width: 60rem;
+}
+
+.newsletter .content form{
+    margin:1rem auto;
+    max-width: 50rem;
+    display: flex;
+}
+  
+.newsletter .content form .box{
+    width:100%;
+    font-size: 1.7rem;
+    text-transform: none;
+    color:#333;
+    padding:1rem;
+    border:.2rem solid var(--black);
+    border-right: none;
+    margin-top: 1rem;
+    
+    background-color: yellow;
+}
+
+.newsletter .content form .btn{
+    border-radius: 0;
+}
+
+
+/* footer */
