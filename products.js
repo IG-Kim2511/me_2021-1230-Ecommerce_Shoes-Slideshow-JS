@@ -1,4 +1,4 @@
-const products = [
+const productsData = [
     {
       id: 0,
       name: "nike shoes 1",

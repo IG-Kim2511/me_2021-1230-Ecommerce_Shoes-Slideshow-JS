@@ -150,37 +150,32 @@ featuredImage3.forEach(
 
 const boxContainer = document.querySelector('.products .box-container');
 
-console.log(products)
+console.log(productsData)
 
 renderProducts();
 function renderProducts() {
-
-    products.forEach((p_product)=>{
-
-        
-    boxContainer.innerHTML += `    
-        <div class="box">
-            <div class="icons">
-                <button href="#" class="fas fa-heart"></button>             
-                <button href="#" class="fas fa-shopping-cart"></button>
-            </div>
-            <img src="${p_product.imgSrc}" alt="">
-            <div class="content">
-                <h3>nike shoes</h3>
-                <div class="price">$120.99 <span>$150.99</span></div>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
+    productsData.forEach((p_product)=>{        
+        boxContainer.innerHTML += `    
+            <div class="box">
+                <div class="icons">
+                    <button href="#" class="fas fa-heart"></button>             
+                    <button href="#" class="fas fa-shopping-cart"></button>
                 </div>
-                <a href="#" class="btn">add to cart</a>
+                <img src="${p_product.imgSrc}" alt="">
+                <div class="content">
+                    <h3>${p_product.name}</h3>
+                    <div class="price">$${p_product.price} <span>$60</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price">inventory: ${p_product.instock}</div>
+                    <button class="btn">add to cart</button>
+                </div>
             </div>
-        </div>
-      `  
-    });
-
-
-  
+        `  
+    });  
 }
