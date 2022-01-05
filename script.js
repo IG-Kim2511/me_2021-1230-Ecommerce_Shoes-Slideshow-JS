@@ -143,3 +143,44 @@ featuredImage3.forEach(
         });
     }
 );
+
+
+
+//🍀 js100. rendering latest products
+
+const boxContainer = document.querySelector('.products .box-container');
+
+console.log(products)
+
+renderProducts();
+function renderProducts() {
+
+    products.forEach((p_product)=>{
+
+        
+    boxContainer.innerHTML += `    
+        <div class="box">
+            <div class="icons">
+                <button href="#" class="fas fa-heart"></button>             
+                <button href="#" class="fas fa-shopping-cart"></button>
+            </div>
+            <img src="${p_product.imgSrc}" alt="">
+            <div class="content">
+                <h3>nike shoes</h3>
+                <div class="price">$120.99 <span>$150.99</span></div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <a href="#" class="btn">add to cart</a>
+            </div>
+        </div>
+      `  
+    });
+
+
+  
+}
