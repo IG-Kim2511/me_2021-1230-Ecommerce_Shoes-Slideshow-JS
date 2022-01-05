@@ -106,7 +106,7 @@ header .icons a:hover{
     color: var(--black);
     border-radius: 0.3rem;
     cursor: pointer;
-    display: none; /* 🍖responsive */
+    display: none; /* 🍖css30 */
 }
 
 /* home section */

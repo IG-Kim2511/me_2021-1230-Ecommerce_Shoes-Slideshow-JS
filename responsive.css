@@ -1,3 +1,71 @@
-@media (max-width : 768px) {
+@media (max-width:991px){
 
+    html{
+      font-size: 55%;
+    }
+  
+    header{
+      padding:2rem;
+    }
+  
+    section{
+      padding:2rem;
+    }  
+}
+
+@media (max-width:768px){
+
+    #menu-bar{
+      display: block; /* css30 */
+    }
+  
+    header .navbar{
+      position: absolute;
+      top:100%; left:-120%;
+      width:100%;
+      background:#eee;
+      border-top: .1rem solid rgba(0,0,0,.1);
+    }
+  
+    /* 🍖js12 */
+    header .navbar.active{
+      left:0;
+    }
+  
+    header .navbar a{
+      font-size: 2rem;
+      background:#fff;
+      border:.1rem solid var(--black);
+      border-radius: .5rem;
+      padding:1.5rem;
+      margin:1.5rem;
+      display: block;
+      text-align: center;
+    }
+  
+    .home .slide-container .slide .image .text{
+      width:60%;
+    }
+  
+    .home #prev,
+    .home #next{
+      top:85%;
+    }  
+}
+
+
+@media (max-width:400px){
+
+    html{
+      font-size: 50%;
+    }
+  
+    .home .slide-container .slide .image{
+      padding-bottom: 6rem;
+    }
+  
+    .heading{
+      font-size: 3rem;
+    }
+  
 }
