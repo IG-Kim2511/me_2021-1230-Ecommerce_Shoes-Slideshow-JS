@@ -8,7 +8,11 @@ wish list
 star function
 */
 
-
+// const
+const boxContainer = document.querySelector('.products .box-container');
+const cartItemsEl = document.querySelector('.cart-items');
+console.log(cartItemsEl)
+const subtotalEl = document.querySelector('.subtotal')
 
 
 /* 🍀js12. menu-bar& navbar click , hide & active */
@@ -160,7 +164,7 @@ featuredImage3.forEach(
 */
 
 
-const boxContainer = document.querySelector('.products .box-container');
+
 
 console.log(productsData)
 
@@ -271,13 +275,11 @@ function addToCart(p_id) {
     60.  || []; 추가 : 첫 화면의 empty array에서도 실행되게...
 */
 
-const cartItemsEl = document.querySelector('.cart-items');
-console.log(cartItemsEl)
 
 updateCart();
 function updateCart() {
     renderCartItems();
-    // renderSubtotal();
+    renderSubtotal();
 
     // js 45-10, js45-20
     // localStorage.setItem('CART',cart);
@@ -358,3 +360,33 @@ function changeNumberOfUnits(action, id) {
     updateCart();
   }
   
+  
+//🦄 🍀js35. calculate, renderSubtotal 
+
+/*
+🦄 🍄 calculate - add, remove 모두 한번에 간단하게!!!
+
+10. price (products.js의 오브젝트)
+
+20. number of units 를 동적으로 products.js의 오브젝트 목록에 넣음
+
+30 price * number of units 하면 자동으로 계산이 됨 
+*/
+
+/* 🦄
+.toFixed(2)
+*/
+
+function renderSubtotal() {
+    let totalPrice = 0;
+    let totalItems = 0;
+
+    cart.forEach((pp_item)=>{
+        totalPrice += pp_item.price * pp_item.numberOfUnits;
+        totalItems += pp_item.numberOfUnits;
+    });
+
+    // subtotalEl.innerHTML =  `Subtotal (0 items): $0`;
+    subtotalEl.innerHTML =  `Subtotal (${totalItems} items): $ ${totalPrice.toFixed(2)}`;
+    
+}
