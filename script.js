@@ -9,6 +9,8 @@ star function
 */
 
 
+
+
 /* 🍀js12. menu-bar& navbar click , hide & active */
 
 /*🍄
@@ -269,6 +271,9 @@ function addToCart(p_id) {
     60.  || []; 추가 : 첫 화면의 empty array에서도 실행되게...
 */
 
+const cartItemsEl = document.querySelector('.cart-items');
+console.log(cartItemsEl)
+
 updateCart();
 function updateCart() {
     renderCartItems();
@@ -287,12 +292,10 @@ function updateCart() {
     onclick "removeItemFromCart" - 🍖js41
 */
 
-const cartItemsEl = document.querySelector('.cart-items');
-console.log(cartItemsEl)
-
 
 function renderCartItems() {
-   /*  cartItemsEl.innerHTML=""; 클릭할때마다 초기화 */
+     /* 클릭할때마다 초기화 (초기화안하면, + - 할때,  이전목록도 같이 render됨)*/
+   cartItemsEl.innerHTML=""; 
 
     cart.forEach((pp_item)=>{
         cartItemsEl.innerHTML += `
@@ -313,3 +316,45 @@ function renderCartItems() {
         `
     });
 }
+
+
+// 🍀js28. + - 버튼 클릭한때, change Number Of Units, 
+/* 🦄
+return { ~ } 형식 가능함
+
+action, id...2개의 parameter 가져와서 사용하는 알고리즘
+*/
+
+/* 🍄
+10. cart 안의 item.id === onclick으로 넘어온 id가 같다면...함수실행
+
+ 10-10. minus + 1보다 큰때에만 적용
+
+ 10-20. plus + instock보다 작을때에만 적용
+
+20. cart 안의 item.id !== onclick으로 넘어온 id가 다르면... return : 바뀌지않은 이전 numberOfUnit 넣음. = 그대로 유지 (새 item... cart 칸에 추가)
+*/
+
+function changeNumberOfUnits(action, id) {
+    cart = cart.map((item) => {
+      let numberOfUnits = item.numberOfUnits;
+  
+      if (item.id === id) {
+        if (action === "minus" && numberOfUnits > 1) {
+          numberOfUnits--;
+        } else if (action === "plus" && numberOfUnits < item.instock) {
+          numberOfUnits++;
+        }
+      }
+  
+      return {
+        ...item,
+  
+        numberOfUnits: numberOfUnits, /* 🍖js3510. */
+      //   numberOfUnits,
+      };
+    });
+  
+    updateCart();
+  }
+  
