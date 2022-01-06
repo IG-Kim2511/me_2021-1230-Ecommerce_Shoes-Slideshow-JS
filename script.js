@@ -183,7 +183,7 @@ function renderProducts() {
                         <i class="far fa-star"></i>
                     </div>
                     <div class="price">inventory: ${p_product.instock}</div>
-                    <button class="btn" onclick="addToCart(${p_product.id})">add to cart</button>
+                    <a class="btn" onclick="addToCart(${p_product.id})">add to cart</a>
                 </div>
             </div>
         `  
