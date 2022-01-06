@@ -192,8 +192,8 @@ function renderProducts() {
 
 // 🍀js13. addToCart
 
-// let cart =[];
-let cart = JSON.parse(localStorage.getItem("CART")) || [];
+let cart =[];
+// let cart = JSON.parse(localStorage.getItem("CART")) || [];
 
 /* 
 🦄object....ID 찾아서 전체 목록 불러오기
@@ -272,10 +272,44 @@ function addToCart(p_id) {
 updateCart();
 function updateCart() {
     renderCartItems();
-    renderSubtotal();
+    // renderSubtotal();
 
     // js 45-10, js45-20
     // localStorage.setItem('CART',cart);
-    localStorage.setItem('CART',JSON.stringify(cart));
-    
+    // localStorage.setItem('CART',JSON.stringify(cart));    
+}
+
+
+// 🍀js13-40. renderCartItems :  cart에 아이템 render
+
+/* 🍄
+    onclick "changeNumberOfUnits" - 🍖js28
+    onclick "removeItemFromCart" - 🍖js41
+*/
+
+const cartItemsEl = document.querySelector('.cart-items');
+console.log(cartItemsEl)
+
+
+function renderCartItems() {
+   /*  cartItemsEl.innerHTML=""; 클릭할때마다 초기화 */
+
+    cart.forEach((pp_item)=>{
+        cartItemsEl.innerHTML += `
+            <div class="cart-item">
+            <div class="item-info" onclick="removeItemFromCart(${pp_item.id})">
+                <img src="${pp_item.imgSrc}" alt="${pp_item.name}">
+                <h4>${pp_item.name}</h4>
+            </div>
+            <div class="unit-price">
+                <small>$</small>${pp_item.price}
+            </div>
+            <div class="units">
+                <div class="btn plus" onclick="changeNumberOfUnits('plus', ${pp_item.id})">+</div>           
+                <div class="number">${pp_item.numberOfUnits}</div>
+                <div class="btn minus" onclick="changeNumberOfUnits('minus', ${pp_item.id})">-</div>
+            </div>
+        </div>
+        `
+    });
 }
