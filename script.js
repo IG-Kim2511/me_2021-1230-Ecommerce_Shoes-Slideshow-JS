@@ -1,10 +1,6 @@
 /* 🍚next
-calculate price ,  subTotal, tax, Total
-
-cart function
-
-wish list
-
+cart page
+wish list page
 star function
 */
 
@@ -198,8 +194,8 @@ function renderProducts() {
 
 // 🍀js13. addToCart
 
-let cart =[];
-// let cart = JSON.parse(localStorage.getItem("CART")) || [];
+// let cart =[];
+let cart = JSON.parse(localStorage.getItem("CART")) || [];
 
 /* 
 🦄object....ID 찾아서 전체 목록 불러오기
@@ -283,7 +279,7 @@ function updateCart() {
 
     // js 45-10, js45-20
     // localStorage.setItem('CART',cart);
-    // localStorage.setItem('CART',JSON.stringify(cart));    
+    localStorage.setItem('CART',JSON.stringify(cart));    
 }
 
 
@@ -412,3 +408,24 @@ function removeItemFromCart(p_id) {
 
     updateCart();    
 }
+
+
+//🍀  localStorage.clear(); /  location.reload();    
+// 🍖js13-10,
+
+const deleteAllBtn = document.querySelector('.delete-all-btn');
+const checkoutBtn = document.querySelector('.checkoutBtn');
+
+deleteAllBtn.addEventListener('click',()=>{
+    localStorage.clear();
+    location.reload();    
+});
+
+checkoutBtn.addEventListener('click',()=>{
+    localStorage.clear();
+    location.reload();    
+   
+    alert(`Thank you`);
+
+});
+
