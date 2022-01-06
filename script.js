@@ -308,6 +308,7 @@ function renderCartItems() {
             </div>
             <div class="unit-price">
                 <small>$</small>${pp_item.price}
+                <img src="./images/icons8-delete-128.png" alt="" class="delete"  onclick="removeItemFromCart(${pp_item.id})">
             </div>
             <div class="units">
                 <div class="btn plus" onclick="changeNumberOfUnits('plus', ${pp_item.id})">+</div>           
@@ -388,5 +389,26 @@ function renderSubtotal() {
 
     // subtotalEl.innerHTML =  `Subtotal (0 items): $0`;
     subtotalEl.innerHTML =  `Subtotal (${totalItems} items): $ ${totalPrice.toFixed(2)}`;
-    
+}
+
+
+// 🍀js41. remove item from cart
+/* 🍄
+  05. remove item을 제외한 새로운 object-array 만듬
+
+  10. render html에서... onclick="removeItemFromCart(${pp_item.id})" 가져옴
+
+  20. filter... cart안의 아이템들 id - onclick에서 가져온 id 비교
+
+  20-2. 서로 다른것만 filter해서 cart array 다시 만듬 
+  
+  20-4.(서로 같으면 새로운 cart array에서 filter로 걸러져서 제외됨)
+*/
+
+// 🦄array.filter( ~~ => ~~~)
+
+function removeItemFromCart(p_id) {
+    cart = cart.filter (pp_item => pp_item.id !== p_id);
+
+    updateCart();    
 }
