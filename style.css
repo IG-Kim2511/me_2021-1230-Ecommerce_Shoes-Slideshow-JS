@@ -552,10 +552,13 @@ header .icons a:hover{
     width: 175px;        
 }
 
+.cart-item .item-info h4{
+    font-size: 20px;
+}
 
 .cart-item .unit-price {
     flex: 1;
-    font-size: 1.2rem;
+    font-size: 20px;
 }
 
 .cart-item .units {
@@ -564,11 +567,10 @@ header .icons a:hover{
 .cart-item .units .number {
     margin: 0 10px;
 
-    font-size: 1.2rem;
+    font-size: 20px;
 }
 .cart-item .units .btn {
-    width: 6px;
-    height: 6px;
+    border-radius: 50%;
 }
 
 /* cart footer */
@@ -583,7 +585,7 @@ header .icons a:hover{
 
     padding: 15px 0;
 
-    font-size: 1.3rem;
+    font-size: 20px;
     
 }
 
