@@ -234,10 +234,9 @@ const notificationText = document.querySelector('.notification-text');
 
 function addToCart(p_id) {    
         // 🍉js13-30
-        if (cart.some((pp_item) => pp_item.id === p_id)) {
-            
-            notificationText.innerHTML=`This item is already on the cart`;            
-            notification_ballon();  
+        if (cart.some((pp_item) => pp_item.id === p_id)) {      
+      
+            alert(`This item is already on the cart`);
 
             changeNumberOfUnits('plus',p_id)                    
         } 
