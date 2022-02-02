@@ -230,11 +230,15 @@ array.some() : array에 조건에 맞는게 있으면 true..return함
 40. -> updateCart -> renderCartItems : cart에 아이템 render
 */
 
+const notificationText = document.querySelector('.notification-text');
 
 function addToCart(p_id) {    
         // 🍉js13-30
         if (cart.some((pp_item) => pp_item.id === p_id)) {
-            alert("This item is already on the cart");
+            
+            notificationText.innerHTML=`This item is already on the cart`;            
+            notification_ballon();  
+
             changeNumberOfUnits('plus',p_id)                    
         } 
         // 🍉js13-20
@@ -251,6 +255,7 @@ function addToCart(p_id) {
         }
         console.log(cart)
         updateCart(); 
+        notification_ballon();
 }
 
 
@@ -429,3 +434,15 @@ checkoutBtn.addEventListener('click',()=>{
 
 });
 
+
+// js110 notification_ballon
+
+const container = document.querySelector('.notification_ballon .container');
+
+const notification_ballon = ()=>{
+    container.setAttribute('style', 'display: flex;');    
+    
+    setTimeout(function(){
+        container.setAttribute('style', 'display: none;');              
+    }, 2000);
+};
