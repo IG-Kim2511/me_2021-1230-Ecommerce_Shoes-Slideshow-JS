@@ -51,6 +51,11 @@
     .home #next{
       top:85%;
     }  
+
+    .cart-item {
+ 
+      flex-direction: column;
+  }
 }
 
 

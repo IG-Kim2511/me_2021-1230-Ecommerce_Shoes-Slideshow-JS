@@ -608,6 +608,7 @@ header .icons a:hover{
     display: flex;
     justify-content: space-around;
     padding: 10px 0;
+
 }
 .cart-item div {
     display: flex;
@@ -652,8 +653,11 @@ header .icons a:hover{
 
     font-size: 20px;
 }
-.cart-item .units .btn {
+.cart-item .units .mybtn {
     border-radius: 50%;
+    border: #000 1px solid;
+    padding: 1rem;
+    /* background-color: yellow; */
 }
 
 /* cart footer */

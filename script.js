@@ -311,9 +311,9 @@ function renderCartItems() {
                 <img src="./images/icons8-delete-128.png" alt="" class="delete"  onclick="removeItemFromCart(${pp_item.id})">
             </div>
             <div class="units">
-                <div class="btn plus" onclick="changeNumberOfUnits('plus', ${pp_item.id})">+</div>           
+                <div class="mybtn plus" onclick="changeNumberOfUnits('plus', ${pp_item.id})"><i class="fa-solid fa-plus"></i></div>           
                 <div class="number">${pp_item.numberOfUnits}</div>
-                <div class="btn minus" onclick="changeNumberOfUnits('minus', ${pp_item.id})">-</div>
+                <div class="mybtn minus" onclick="changeNumberOfUnits('minus', ${pp_item.id})"><i class="fa-solid fa-minus"></i></div>
             </div>
         </div>
         `
