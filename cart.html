@@ -14,31 +14,71 @@
 
 </head>
 <body>
-    <header>
-        <!-- 🍖js12 -->
-        <div id="menu-bar" class="fas fa-bars"></div>
+    <nav class="nav">
+    </nav>
 
-        <a href="#" class="logo">nike</a>
 
-        <!-- 🍖js12 -->
-        <nav class="navbar">
-            <a href="./index.html">home</a>
-            <a href="#products">products</a>
-            <a href="#featured">featured</a>        
-        </nav>
-
-        <div class="icons">
-            <a href="./wishList.html" class="fas fa-heart"></a>
-            <a href="./cart.html" class="fas fa-shopping-cart"></a>
-            <a href="./mypage.html" class="fas fa-user"></a>
-        </div>
-    </header>
     <div style="padding: 5rem;"></div>
  
+
+
+    <section id="cartSection">
+        
+        <h1 class="heading"><span>Cart</span> </h1>
+    
+        <div class="cart">
+            <div class="cart-header">
+                <div class="column1"></div>
+                <div class="column2"> </div>
+                <div class="column3"></div>
+            </div>
+            <div class="cart-items">
+    
+                <!-- 🍖js13-40 - render Cart Items -->
+            <!-- 
+    
+                <div class="cart-item">
+                    <div class="item-info">
+                        <img src="./img/Clothing-Fill-Color(1).png" alt="">
+                        <h4>item.name</h4>
+                    </div>
+                    <div class="unit-price">
+                        <small>$</small>item.price
+                    </div>
+                    <div class="units">
+                        <div class="btn minus" >-</div>
+                        <div class="number">numberOfUnits</div>
+                        <div class="btn plus" >+</div>           
+                    </div>
+                </div>
+    
+            -->
+            </div>
+            <div class="cart-footer">
+                <div class="delete-all">
+                    <button class="delete-all-btn btn">delete all</button>
+                </div>
+                <h1 class="subtotal">
+                    Subtotal (0 items): $0
+                </h1>
+                <div class="checkout">
+                    <button class="btn checkoutBtn">Proceed to checkout</button>
+                    
+                </div>
+            </div>
+    </section>
+
 
     <footer></footer>
 
 
     
+
+
+
+
+<script src="./nav.js"></script>
+    <script src="./products.js"></script>
+    <script src="cart.js"></script>
 </body>
 </html>
