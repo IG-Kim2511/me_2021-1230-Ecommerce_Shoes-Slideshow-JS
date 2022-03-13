@@ -1,5 +1,13 @@
+
+// 🍤script.js에서 필요한부분 그냥 복사해옴. script.js에 코드 그대로 있음.
+
+
 const cartItemsEl = document.querySelector('.cart-items');
 console.log(cartItemsEl)
+
+const subtotalEl = document.querySelector('.subtotal')
+
+
 
 // 🍀js13. addToCart
 
@@ -128,3 +136,103 @@ function renderCartItems() {
         `
     });
 }
+
+
+
+
+//🦄 🍀js35. calculate, renderSubtotal 
+
+/*
+🦄 🍄 calculate - add, remove 모두 한번에 간단하게!!!
+
+10. price (products.js의 오브젝트)
+
+20. number of units 를 동적으로 products.js의 오브젝트 목록에 넣음
+
+30 price * number of units 하면 자동으로 계산이 됨 
+*/
+
+/* 🦄
+.toFixed(2)
+*/
+
+function renderSubtotal() {
+    let totalPrice = 0;
+    let totalItems = 0;
+
+    cart.forEach((pp_item)=>{
+        totalPrice += pp_item.price * pp_item.numberOfUnits;
+        totalItems += pp_item.numberOfUnits;
+    });
+
+    // subtotalEl.innerHTML =  `Subtotal (0 items): $0`;
+    subtotalEl.innerHTML =  `Subtotal (${totalItems} items): $ ${totalPrice.toFixed(2)}`;
+}
+
+
+
+
+
+
+
+// 🍀js28. + - 버튼 클릭한때, change Number Of Units, 
+/* 🦄
+return { ~ } 형식 가능함
+
+action, id...2개의 parameter 가져와서 사용하는 알고리즘
+*/
+
+/* 🍄
+10. cart 안의 item.id === onclick으로 넘어온 id가 같다면...함수실행
+
+ 10-10. minus + 1보다 큰때에만 적용
+
+ 10-20. plus + instock보다 작을때에만 적용
+
+20. cart 안의 item.id !== onclick으로 넘어온 id가 다르면... return : 바뀌지않은 이전 numberOfUnit 넣음. = 그대로 유지 (새 item... cart 칸에 추가)
+*/
+
+function changeNumberOfUnits(action, id) {
+    cart = cart.map((item) => {
+      let numberOfUnits = item.numberOfUnits;
+  
+      if (item.id === id) {
+        if (action === "minus" && numberOfUnits > 1) {
+          numberOfUnits--;
+        } else if (action === "plus" && numberOfUnits < item.instock) {
+          numberOfUnits++;
+        }
+      }
+  
+      return {
+        ...item,
+  
+        numberOfUnits: numberOfUnits, /* 🍖js3510. */
+      //   numberOfUnits,
+      };
+    });
+  
+    updateCart();
+  }
+  
+
+
+
+  //🍀  localStorage.clear(); /  location.reload();    
+// 🍖js13-10,
+
+const deleteAllBtn = document.querySelector('.delete-all-btn');
+const checkoutBtn = document.querySelector('.checkoutBtn');
+
+deleteAllBtn.addEventListener('click',()=>{
+    localStorage.clear();
+    location.reload();    
+});
+
+checkoutBtn.addEventListener('click',()=>{
+    localStorage.clear();
+    location.reload();    
+   
+    alert(`Thank you`);
+
+});
