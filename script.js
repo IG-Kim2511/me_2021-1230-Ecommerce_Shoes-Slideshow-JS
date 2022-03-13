@@ -171,7 +171,7 @@ function renderProducts() {
             <div class="box">
                 <div class="icons">
                     <button href="#" class="fas fa-heart"></button>             
-                    <button href="#" class="fas fa-shopping-cart"></button>
+                    <button href="#" class="fas fa-shopping-cart"  onclick="addToCart(${p_product.id})"></button>
                 </div>
                 <img src="${p_product.imgSrc}" alt="">
                 <div class="content">
