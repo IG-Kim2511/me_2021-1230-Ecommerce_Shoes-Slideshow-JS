@@ -653,12 +653,39 @@ header .icons a:hover{
 
     font-size: 20px;
 }
+
+.cart-item .delete {
+    
+    cursor: pointer;
+
+}
+
+.cart-item .delete:hover{
+    background:var(--orange);
+    color:#fff;
+
+    border-radius: 0.3rem;
+}
+
+
+
 .cart-item .units .mybtn {
     border-radius: 50%;
     border: #000 1px solid;
     padding: 1rem;
-    /* background-color: yellow; */
+
+    cursor: pointer;
+
+}    
+
+.cart-item .units .mybtn:hover{
+    background:var(--orange);
+    color:#fff;
 }
+
+
+
+
 
 /* cart footer */
 .cart-footer {
