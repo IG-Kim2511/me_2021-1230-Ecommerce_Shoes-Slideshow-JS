@@ -346,8 +346,11 @@ function changeNumberOfUnits(action, id) {
         if (action === "minus" && numberOfUnits > 1) {
           numberOfUnits--;
         } else if (action === "plus" && numberOfUnits < item.instock) {
-          numberOfUnits++;
-        }
+          numberOfUnits++;          
+        }         
+        else if (action === "plus" && numberOfUnits === item.instock) {
+            alert('out of stock');            
+          }  
       }
   
       return {
@@ -360,6 +363,7 @@ function changeNumberOfUnits(action, id) {
   
     updateCart();
   }
+
   
   
 //🦄 🍀js35. calculate, renderSubtotal 

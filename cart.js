@@ -205,6 +205,9 @@ function changeNumberOfUnits(action, id) {
         } else if (action === "plus" && numberOfUnits < item.instock) {
           numberOfUnits++;
         }
+        else if (action === "plus" && numberOfUnits === item.instock) {
+            alert('out of stock');            
+          } 
       }
   
       return {
