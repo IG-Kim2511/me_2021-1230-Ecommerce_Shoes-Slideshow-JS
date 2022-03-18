@@ -106,7 +106,7 @@ header .icons a:hover{
     color: var(--black);
     border-radius: 0.3rem;
     cursor: pointer;
-    display: none; /* 🍖css30 */
+    display: none; /* 🥒css30 */
 }
 
 
@@ -289,11 +289,11 @@ header .icons a:hover{
 }
 
 .home .slide-container{
-    display: none; /* 🍖js22 css  */
+    display: none; /* 🥒js22 css  */
 }
 
 .home .slide-container.active{
-    display: block; /* 🍖js22 css  */
+    display: block; /* 🥒js22 css  */
 }
 
 .home #prev,
@@ -304,7 +304,7 @@ header .icons a:hover{
     border-radius: 50%;
     z-index: 100;
 
-    height: 5rem;   /* 🍖css20 */
+    height: 5rem;   /* 🥒css20 */
     width: 5rem;
     line-height: 4.5rem; /* 🦄css20 수직정렬 */
 
@@ -586,7 +586,7 @@ header .icons a:hover{
 
 
 
-/*🍀🍖js13 CART */
+/*🍀🥒js13 CART */
 .cart {
     width: 100%;
     position: relative;

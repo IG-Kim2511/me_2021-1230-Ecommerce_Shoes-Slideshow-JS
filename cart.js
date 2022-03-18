@@ -39,10 +39,10 @@ find..찾아낸 object ->  const item
 products.js의 오브젝트 목록에 numberOfUnits:1 추가 (첫번째 아이템...)
 
 30. click한 아이템id === products.js파일의 id 같으면, cart화면에 추가 x... 수량 up & down
-->🍖js28. changeNumberOfUnits함수 실행
+->🥒js28. changeNumberOfUnits함수 실행
 
 array.some() : array에 조건에 맞는게 있으면 true..return함
-->🍖js09. onClick
+->🥒js09. onClick
 
 40. -> updateCart -> renderCartItems : cart에 아이템 render
 */
@@ -107,8 +107,8 @@ function updateCart() {
 // 🍀js13-40. renderCartItems :  cart에 아이템 render
 
 /* 🍄
-    onclick "changeNumberOfUnits" - 🍖js28
-    onclick "removeItemFromCart" - 🍖js41
+    onclick "changeNumberOfUnits" - 🥒js28
+    onclick "removeItemFromCart" - 🥒js41
 */
 
 
@@ -213,7 +213,7 @@ function changeNumberOfUnits(action, id) {
       return {
         ...item,
   
-        numberOfUnits: numberOfUnits, /* 🍖js3510. */
+        numberOfUnits: numberOfUnits, /* 🥒js3510. */
       //   numberOfUnits,
       };
     });
@@ -244,7 +244,7 @@ function removeItemFromCart(p_id) {
 
 
   //🍀  localStorage.clear(); /  location.reload();    
-// 🍖js13-10,
+// 🥒js13-10,
 
 const deleteAllBtn = document.querySelector('.delete-all-btn');
 const checkoutBtn = document.querySelector('.checkoutBtn');
