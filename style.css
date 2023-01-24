@@ -112,8 +112,9 @@ header .icons a:hover{
 
 
 /* 🍉js110 notification_ballon */
+/* 
 .notification_ballon .container {
-    /* display: flex; */
+    
     display: none;
     height: 100%;
     justify-content: center;
@@ -154,6 +155,34 @@ header .icons a:hover{
     font-size: 14px;
     animation: fade-in .65s ease-in forwards;
   }
+ */
+
+ 
+/* js110 toast  */
+
+#snackbar{
+    position: absolute;
+    left: -100px;
+    bottom: -100px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+
   
   @keyframes scale-in {
     100% {

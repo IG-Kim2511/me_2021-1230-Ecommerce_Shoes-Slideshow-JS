@@ -218,7 +218,6 @@ function addToCart(p_id) {
         }
         console.log(cart)
         updateCart(); 
-        notification_ballon();
 }
 
 
@@ -291,10 +290,13 @@ function changeNumberOfUnits(action, id) {
         if (action === "minus" && numberOfUnits > 1) {
           numberOfUnits--;
         } else if (action === "plus" && numberOfUnits < item.instock) {
-          numberOfUnits++;          
+          numberOfUnits++;     
+          
+          showToast('added');     
         }         
         else if (action === "plus" && numberOfUnits === item.instock) {
-            alert('out of stock');            
+            // alert('out of stock');            
+            showToast('out of stock');   
           }  
       }
   
@@ -302,7 +304,7 @@ function changeNumberOfUnits(action, id) {
         ...item,
   
         numberOfUnits: numberOfUnits, /* 🥒js3510. */
-      //   numberOfUnits,
+      // numberOfUnits,
       };
     });
   
@@ -368,6 +370,7 @@ checkoutBtn.addEventListener('click',()=>{
 
 // js110 notification_ballon
 
+/* 
 const container = document.querySelector('.notification_ballon .container');
 
 const notification_ballon = ()=>{
@@ -376,4 +379,27 @@ const notification_ballon = ()=>{
     setTimeout(function(){
         container.setAttribute('style', 'display: none;');              
     }, 2000);
-};
+}; 
+*/
+
+function showToast(message) {
+    // Get the snackbar DIV
+    let x = document.getElementById("snackbar");
+  
+    // Add the "show" class to DIV
+    x.className = "show";
+  
+    // Update the message text
+    x.innerHTML = message;
+  
+    // After 3 seconds, remove the show class from DIV
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+  }
+  
+
+
+
+
+
+
+
