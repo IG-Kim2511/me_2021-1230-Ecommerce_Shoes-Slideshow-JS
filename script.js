@@ -292,11 +292,11 @@ function changeNumberOfUnits(action, id) {
         } else if (action === "plus" && numberOfUnits < item.instock) {
           numberOfUnits++;     
           
-          showToast('added');     
+          showToast('added to cart','blue');
         }         
         else if (action === "plus" && numberOfUnits === item.instock) {
             // alert('out of stock');            
-            showToast('out of stock');   
+            showToast('out of stock','red');   
           }  
       }
   
@@ -368,8 +368,9 @@ checkoutBtn.addEventListener('click',()=>{
 });
 
 
-// js110 notification_ballon
+//🍀 js110 toast (notification_ballon)
 
+// 1)
 /* 
 const container = document.querySelector('.notification_ballon .container');
 
@@ -382,22 +383,35 @@ const notification_ballon = ()=>{
 }; 
 */
 
-function showToast(message) {
-    // Get the snackbar DIV
-    let x = document.getElementById("snackbar");
+// 2)
+// function showToast(message) {
+//     // Get the snackbar DIV
+//     let x = document.getElementById("snackbar");
   
-    // Add the "show" class to DIV
-    x.className = "show";
+//     // Add the "show" class to DIV
+//     x.className = "show";
   
-    // Update the message text
-    x.innerHTML = message;
+//     // Update the message text
+//     x.innerHTML = message;
   
-    // After 3 seconds, remove the show class from DIV
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-  }
+//     // After 3 seconds, remove the show class from DIV
+//     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+//   }
   
+// get the buttons
+const toastBox = document.getElementById("toast-box");
+const toast = document.createElement("div");
 
+// create the toast element
+toast.classList.add("toast");
+toastBox.appendChild(toast);
 
+function showToast(message,color) {
+    toast.innerHTML = message;
+    toast.style.backgroundColor = color;
+    toast.classList.add("show");
+    setTimeout(function(){ toast.classList.remove("show"); }, 3000);
+}
 
 
 
