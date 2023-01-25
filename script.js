@@ -368,20 +368,7 @@ checkoutBtn.addEventListener('click',()=>{
 });
 
 
-//🍀 js110 toast (notification_ballon)
-
-// 1)
-/* 
-const container = document.querySelector('.notification_ballon .container');
-
-const notification_ballon = ()=>{
-    container.setAttribute('style', 'display: flex;');    
-    
-    setTimeout(function(){
-        container.setAttribute('style', 'display: none;');              
-    }, 2000);
-}; 
-*/
+//🍀 js110 toast
 
 // 2)
 // function showToast(message) {

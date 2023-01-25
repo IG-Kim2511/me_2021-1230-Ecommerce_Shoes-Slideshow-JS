@@ -19,6 +19,9 @@
 html{    
     font-size: 62.5%;
     overflow-x: hidden;
+      /* 🍚scroll-padding-top:
+  scroll했을때 top에 padding을 넣고 멈춤
+   https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-padding-top  */
     scroll-padding-top: 6rem;
     scroll-behavior: smooth;
 }
@@ -110,80 +113,7 @@ header .icons a:hover{
 }
 
 
-
-/* 🍉js110 notification_ballon */
-/* 
-.notification_ballon .container {
-    
-    display: none;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
-
-    position: fixed;
-    top: 50%;
- 
-    left: 50%;   
-    transform: translateX(-50%) translateY(-50%);
-
-    margin: auto;
-  }
-  
-  .notification_ballon .rectangle {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    positon: relative;
-    width: 50px;
-    height: 50px;
-    background: green;
-    transform: scale(0);
-    border-radius: 50%;
-    color: white;
-    opacity: 0;
-    overflow: hidden;
-    animation: scale-in .3s ease-out forwards,
-        expand .35s .25s ease-out forwards;
-  }
-  
-  .notification_ballon .notification-text {
-    display: flex;
-    align-items: center;
-    padding: 0 16px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    animation: fade-in .65s ease-in forwards;
-  }
- */
-
- 
-/* js110 toast  */
-/* 
-#snackbar{
-    position: absolute;
-    left: -100px;
-    bottom: -100px;
-}
-
-#snackbar.show {
-    visibility: visible;
-    min-width: 250px;
-    margin-left: -125px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    border-radius: 2px;
-    padding: 16px;
-    position: fixed;
-    z-index: 1;
-    left: 50%;
-    bottom: 30px;
-    font-size: 17px;
-}
- */
-
-
+/* 👉js110 toast  */
  
 .toast {
     visibility: hidden;
