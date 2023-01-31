@@ -163,6 +163,14 @@ function renderProducts() {
 
 // 🍀js13. addToCart, 새로운 항목 numberOfUnit...object에 추가하기
 
+/* 🍚
+    JSON.parse(localStorage.getItem("CART")) || [];
+
+    cart.some((pp_item) => pp_item.id === p_id)
+    
+    productsData.find((pp_product) => pp_product.id === p_id);
+*/
+
 // let cart =[];
 let cart = JSON.parse(localStorage.getItem("CART")) || [];
 
