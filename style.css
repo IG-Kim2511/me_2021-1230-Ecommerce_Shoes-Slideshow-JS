@@ -61,6 +61,12 @@ section{
     color:#fff;
 }
 
+.btn:active {
+    position: relative;
+    top: 1px;
+  }
+
+
 /* header section*/
 
 header{

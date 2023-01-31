@@ -130,11 +130,6 @@ featuredImage1.forEach(p_image_1=>{p_image_1.addEventListener('click',()=>{
    🦄설명:
    https://github.com/IG-Kim2511/me_2021-1109-cloth-Shopping_Cart-ig-js
 */
-
-
-
-
-
 console.log(productsData)
 
 renderProducts();
@@ -158,12 +153,13 @@ function renderProducts() {
                         <i class="far fa-star"></i>
                     </div>
                     <div class="price">inventory: ${p_product.instock}</div>
-                    <a class="btn" onclick="addToCart(${p_product.id})">add to cart</a>
+                    <button class="btn" onclick="addToCart(${p_product.id})">add to cart</button>
                 </div>
             </div>
         `  
     });  
 }
+
 
 // 🍀js13. addToCart, 새로운 항목 numberOfUnit...object에 추가하기
 
@@ -174,9 +170,6 @@ let cart = JSON.parse(localStorage.getItem("CART")) || [];
    🦄설명:
    https://github.com/IG-Kim2511/me_2021-1109-cloth-Shopping_Cart-ig-js
 */
-
-
-const notificationText = document.querySelector('.notification-text');
 
 function addToCart(p_id) {    
         // 🍉js13-30
@@ -379,7 +372,7 @@ function showToast(message,color) {
     toast.innerHTML = message;
     toast.style.backgroundColor = color;
     toast.classList.add("show");
-    setTimeout(function(){ toast.classList.remove("show"); }, 3000);
+    setTimeout(function(){ toast.classList.remove("show"); }, 1000);
 }
 
 
