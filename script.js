@@ -100,24 +100,21 @@ function prev() {
 
 
 // 🍀js39, featured images 선택 (옆의 다른 사진들, 메인화면에 보이게하기)
-
-/*🦄 class이름으로 src찾아내기
-document.querySelector('.~').src
-
-~.getAttribute('src');
-*/
+// 🍄 클릭해서 가져온 src 를 👉 big-image img태그의 src에 넣기
 
 /* 🍄
-10 forEach : class "featured-image-1"가져옴
+10 class이름으로 src찾아서 가져오기
+~.getAttribute('src');           --🍚
 
-20 getAttribute('src') : 🦄
+20. querySelectorAll, forEach : class "featured-image-1" 태그 모두 가져옴
 
-30 클릭한곳의 src...👉 class"big-imgae-1"의 src에 삽입 
-*/
+30. class이름으로 src찾아내기
+document.querySelector('.~').src        --🍚
+
+40. 클릭해서 가져온 src 를 👉 big-image img태그의 src에 넣기
+ */
 
 let featuredImage1 = document.querySelectorAll('.featured-image-1')
-let featuredImage2 = document.querySelectorAll('.featured-image-2')
-let featuredImage3 = document.querySelectorAll('.featured-image-3')
 
 featuredImage1.forEach(p_image_1=>{p_image_1.addEventListener('click',()=>{
             let getSrc = p_image_1.getAttribute('src');
@@ -126,21 +123,6 @@ featuredImage1.forEach(p_image_1=>{p_image_1.addEventListener('click',()=>{
         });
     });
     
-featuredImage2.forEach(p_image_2=>{p_image_2.addEventListener('click',()=>{
-            let getSrc = p_image_2.getAttribute('src');
-
-            document.querySelector('.big-image-2').src = getSrc;
-        });
-    });
-
-featuredImage3.forEach(p_image_3=>{p_image_3.addEventListener('click',()=>{
-            let getSrc = p_image_3.getAttribute('src');
-
-            document.querySelector('.big-image-3').src = getSrc;
-        });
-    });
-
-
 
 //🍀 js100. rendering latest products
 
