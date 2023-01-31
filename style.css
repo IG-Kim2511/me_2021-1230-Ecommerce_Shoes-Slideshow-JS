@@ -205,7 +205,7 @@ to {bottom: 0; opacity: 0;}
 
 .home .slide-container .slide{
     
-    min-height: 100vh;
+    min-height: 50vh;
     
     display: flex;
     align-items: center;
@@ -219,7 +219,11 @@ to {bottom: 0; opacity: 0;}
 
 .home .slide-container .slide .content{
     
-     /* 🦄https://developer.mozilla.org/en-US/docs/Web/CSS/flex */
+     /* 🦄https://developer.mozilla.org/en-US/docs/Web/CSS/flex      
+     flex-grow : 1;        (여백을 각 div가 1씩 똑같이 나눠가짐)
+    flex-shrink : 1;      (화면크기따라서 같이 작아짐)
+    flex-basis : 40rem;     (기본크기 40rem)
+    */
      flex: 1 1 40rem;
      animation: slideContent 0.5s linear 1s backwards;
 }
@@ -315,19 +319,14 @@ to {bottom: 0; opacity: 0;}
     height: 5rem;   /* 🥒css20 */
     width: 5rem;
     line-height: 4.5rem; /* 🦄css20 수직정렬 */
-
     font-size: 2rem;
+
     color: var(--black);
     border: 0.2rem solid var(--black);
     cursor: pointer;
     text-align: center; /* 🦄수평정렬 */
 }
 
-.home #prev:hover,
-.home #next:hover{
-  color:#fff;
-  background:var(--orange);
-}
 .home #prev{
     left:3rem;
 }
@@ -335,6 +334,13 @@ to {bottom: 0; opacity: 0;}
 .home #next{
     right:3rem;
 }
+
+.home #prev:hover,
+.home #next:hover{
+  color:#fff;
+  background:var(--orange);
+}
+
 
 /* service section*/
 
@@ -380,13 +386,17 @@ to {bottom: 0; opacity: 0;}
 }
 
 .products .box-container .box{
+    flex:1 1 30rem;
+
+    position: relative;
+
     border:.1rem solid rgba(0,0,0,.1);
     border-radius: .5rem;
     text-align: center;
-    position: relative;
+
     overflow: hidden;
     background:#f9f9f9;
-    flex:1 1 30rem;
+
 }
 
 .products .box-container .box .content{
@@ -396,20 +406,22 @@ to {bottom: 0; opacity: 0;}
 .products .box-container .box img{
     height: 10rem;
     transform: rotate(-35deg);
-    filter: drop-shadow(0 0.5rem 1rem ); /* 🦄filter */
+
+    /* 🦄filter  이미지에 세피아, 흑백같은 효과 넣기*/
+    filter: drop-shadow(0 0.5rem 1rem ); 
 
     margin: 8rem 2rem;
 }
 
 .products .box-container .box:hover img{
-    transform: rotate(-35deg) scale(1.2);
+    transform: rotate( 0deg) scale(1.2);
 }
 
 .products .box-container .box .icons{
     display: flex;
     flex-flow: column;  /* 🦄flex-flow */
     position: absolute; 
-    top:.5rem; left:-10rem;
+    top:.5rem; left:-10rem; /* css */
 
 }
 
