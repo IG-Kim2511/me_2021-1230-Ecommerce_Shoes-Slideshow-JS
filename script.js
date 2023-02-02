@@ -347,6 +347,7 @@ checkoutBtn.addEventListener('click',()=>{
     location.reload();    
    
     alert(`Thank you`);
+    
 
 });
 
